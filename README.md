@@ -13,5 +13,5 @@ Clone the repository and run the project locally, or deploy it to your own serve
 **Note:** This project is proprietary and not open for public reuse.
 
 ## Copyright & License
-© 2025 [Your Name]. All rights reserved.  
+© 2025 Empire. All rights reserved.  
 This project is proprietary software. Unauthorized copying, modification, distribution, or use of this code, via any medium, is strictly prohibited without prior written permission from the author.
