@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IP Locator</title>
+    <meta name="description" content="IP Locator: Lookup ISP, location, and more for any IPv4 or IPv6." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div class="brand" aria-label="IP Locator">
+          <span class="logo">IP</span>
+          <span class="brand-text">Locator</span>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="card search-card">
+          <h1 class="title">Check IP details</h1>
+          <p class="subtitle">Enter an IPv4 or IPv6. Or use your current IP.</p>
+
+          <form id="lookup-form" class="lookup-form" autocomplete="off">
+            <input
+              id="ip-input"
+              class="ip-input"
+              name="ip"
+              type="text"
+              inputmode="latin"
+              autocapitalize="off"
+              autocorrect="off"
+              spellcheck="false"
+              placeholder="e.g. 8.8.8.8 or 2001:4860:4860::8888"
+              aria-label="IP address"
+            />
+            <div class="actions">
+              <button id="check-btn" type="submit" class="btn primary">Check</button>
+              <button id="myip-btn" type="button" class="btn">Use My IP</button>
+            </div>
+          </form>
+
+          <div id="status" class="status hidden" role="status" aria-live="polite">
+            <span class="spinner" aria-hidden="true"></span>
+            <span id="status-text">Please wait — checking ISP and other details...</span>
+          </div>
+
+          <div id="error" class="error hidden" role="alert"></div>
+        </section>
+
+        <section id="results" class="card results hidden">
+          <div class="results-header">
+            <div class="ip-line">
+              <span class="label">IP</span>
+              <span id="res-ip" class="mono"></span>
+              <button id="copy-ip" class="copy-btn" title="Copy IP" aria-label="Copy IP">Copy</button>
+            </div>
+            <div class="meta-line">
+              <span id="res-version" class="chip"></span>
+              <a id="map-link" class="chip link" href="#" target="_blank" rel="noopener">Open on map</a>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="kv"><div class="k">ISP</div><div id="res-isp" class="v"></div></div>
+            <div class="kv"><div class="k">Organization</div><div id="res-org" class="v"></div></div>
+            <div class="kv"><div class="k">ASN</div><div id="res-asn" class="v"></div></div>
+            <div class="kv"><div class="k">Country</div><div id="res-country" class="v"></div></div>
+            <div class="kv"><div class="k">Region</div><div id="res-region" class="v"></div></div>
+            <div class="kv"><div class="k">City</div><div id="res-city" class="v"></div></div>
+            <div class="kv"><div class="k">Postal</div><div id="res-postal" class="v"></div></div>
+            <div class="kv"><div class="k">Latitude</div><div id="res-lat" class="v"></div></div>
+            <div class="kv"><div class="k">Longitude</div><div id="res-lon" class="v"></div></div>
+            <div class="kv"><div class="k">Timezone</div><div id="res-tz" class="v"></div></div>
+            <div class="kv"><div class="k">UTC</div><div id="res-utc" class="v"></div></div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>2025 IP LOCATOR. EMPIRE</p>
+      </footer>
+    </div>
+
+    <script defer src="client.js"></script>
+  </body>
+  </html>
+
+
+
